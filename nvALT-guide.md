@@ -10,7 +10,7 @@
 
 [nvALT](http://brettterpstra.com/projects/nvalt/) pour OSX est une application *gratuite*, légère et rapide qui permet de **prendre des notes instantanément**.
 
-[nvALT](https://www.evernote.com/shard/s89/sh/31fef5eb-ef56-4139-9802-14040164c539/57d120150a72defff1f8ec889eccb650/deep/0/nvALT.jpg)
+![nvALT](https://www.evernote.com/shard/s89/sh/31fef5eb-ef56-4139-9802-14040164c539/57d120150a72defff1f8ec889eccb650/deep/0/nvALT.jpg)
 
 nvALT c'est également : 
 
