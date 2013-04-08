@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Nvalt-guide by galaakk</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Nvalt-guide</h1>
+          <h2>Un guide en français sur la prise de notes en Markdown avec nvALT. Source du guide en Markdown sur GitHub.</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/galaakk/nvALT-guide/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/galaakk/nvALT-guide/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/galaakk/nvALT-guide" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>nvALT</h1>
+
+<p><em>ou</em></p>
+
+<h2>La prise de notes pour les perfectionnistes</h2>
+
+<p><a href="http://brettterpstra.com/projects/nvalt/">nvALT</a> pour OSX est une application <em>gratuite</em>, légère et rapide qui permet de <strong>prendre des notes instantanément</strong>.</p>
+
+<p><img src="https://www.evernote.com/shard/s89/sh/31fef5eb-ef56-4139-9802-14040164c539/57d120150a72defff1f8ec889eccb650/deep/0/nvALT.jpg" alt="nvALT"></p>
+
+<p>nvALT c'est également : </p>
+
+<ul>
+<li>une gestion des notes par étiquettes et mots-clés</li>
+<li>le plaisir d'écrire en <a href="http://fr.wikipedia.org/wiki/Markdown">Markdown</a>
+</li>
+<li>vos notes synchronisées sur tous vos appareils avec <a href="https://www.dropbox.com/">Dropbox</a>
+</li>
+<li>vos notes accessibles par toute application sur n'importe quelle plateforme, puisque constituées de simples fichiers texte</li>
+</ul><p>Après avoir essayé <a href="http://www.springpad.com">Springpad</a>, <a href="http://simplenote.com/">Simplenote</a>, <a href="https://evernote.com/">Evernote</a> et de nombreuses autres solutions pour prendre des notes de manière efficace, j'ai fini par réaliser que rien ne pouvait remplacer la rapidité, la versatilité, la pérénnité et le plaisir d'utiliser de simples fichiers texte.</p>
+
+<p>Le désir d'efficacité m'a poussé vers la meilleure solution à ce jour sur Mac : nvALT de <a href="http://brettterpstra.com/">Brett Terpstra</a>.</p>
+
+<p>Si vous aimez prendre des notes et que vous êtes sur Mac, c'est incontournable, comme vous allez vous en rendre compte.</p>
+
+<h2>Principaux avantages de nvALT</h2>
+
+<p>fork[^fn-1] du déjà très bon <a href="http://notational.net/fr/">Notational Velocity</a>, <strong>nvALT</strong> possède de nombreux avantages :</p>
+
+<p>[^fn-1]: <a href="http://fr.wikipedia.org/wiki/Fork">Définition de fork</a></p>
+
+<ul>
+<li>vitesse : application ultra réactive, même sur une machine modeste</li>
+<li>implémentation markdown avancée</li>
+<li>une interface graphique mais une philosophie hacker</li>
+<li>bonne qualité de prévisualisation et export</li>
+<li>interface spéciale amoureux du clavier</li>
+<li>openmeta tags pour tri et recherche (mdfind, spotlight, meta indexeurs)</li>
+<li>prise de note immédiate, jamais aucun délai</li>
+<li>on peut ouvrir une note dans un autre éditeur à tout instant</li>
+<li>inutile de penser à enregistrer, c'est automatique et instantané</li>
+</ul><h3>Pourquoi pas une base de données ?</h3>
+
+<p>La plupart des logiciels de prise de notes enregistrent celles-ci dans un format qui leur est propre, souvent de manière compressée et encodée dans une base de données (<a href="http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es">BDD</a>).</p>
+
+<p>Ce principe souffre de nombreux défauts. Parmi les principaux :</p>
+
+<ul>
+<li>fragile : une BDD encodée est susceptible d'être corrompue par un bug ou une mauvaise manipulation</li>
+<li>binaire : la BDD est illisible en dehors d'une application qui en comprend le format</li>
+<li>pas portable : si personne n'a créé d'outil pour exporter le contenu de votre BDD vers un autre format, vous êtes enfermés</li>
+<li>pas pérenne : que deviennent vos notes si le logiciel qui crée et lit la BDD n'existe plus ?</li>
+<li>exige une maintenance : les logiciels évoluent, le format de la BDD aussi, d'où mises à jour fastidieuses et pouvant occasionner de nouveaux bugs</li>
+</ul><p>Une BDD pour ses notes peut être utile dans certains cas[^fn-2] : si vous avez d'énormes quantités de données à traiter, données ayant les mêmes champs et tags, alors manipuler plusieurs milliers de fichiers n'est <em>peut-être</em> pas le bon choix. A vous de voir. </p>
+
+<p>Personnellement je n'en suis absolument pas certain : avec des outils Unix et des scripts Bash ou Ruby, on fait des merveilles sur des fichiers, même en surnombre.</p>
+
+<p>[^fn-2]: nvALT propose en option de fonctionner avec une base de données au lieu de fichiers texte.  Même si l'application reste agréable à utiliser dans ce cas, ça reste une gestion "à l'ancienne" avec un format que l'on ne peut pas utiliser en dehors de l'application qui le produit.</p>
+
+<h3>Pourquoi écrire en Markdown ?</h3>
+
+<p>C'est comme écrire en langage naturel, avec simplement quelques variations très faciles à retenir.</p>
+
+<p>Et c'est un format texte, compatible avec tout, facilement exportable en pdf, doc, html, etc.</p>
+
+<p>Une fois le texte écrit, on peut varier l'habillage visuel indépendamment du contenu.</p>
+
+<p>Les avantages sont nombreux !</p>
+
+<p>On peut se référer à <a href="http://bywordapp.com/markdown/guide.html">Markdown Guide</a> (en anglais) ou <a href="http://fr.wikipedia.org/wiki/Markdown">Markdown Wikipédia</a> (en français).</p>
+
+<p>Le mode fichiers texte permet d'être accessible par un grand nombre d'apps, y compris sur appareils mobiles.</p>
+
+<p>Surtout : les fichiers texte en Markdown, c'est <em>universel</em> et paré pour le futur (contrairement à mes vieux fichiers des années 80, sniff).</p>
+
+<p><img src="https://www.evernote.com/shard/s89/sh/6b594b93-cf66-4b66-b8ae-2f8e44dbf287/527fdc44b4e82a1a094589a5149715ea/deep/0/nvalt-prise-de-notes.jpg" alt=""></p>
+
+<h3>Pourquoi pas un traitement de texte ?</h3>
+
+<p>Utiles au bureau, quoi que de moins en moins, <a href="https://www.libreoffice.org/">LibreOffice</a> ou <a href="https://office.microsoft.com/">MSWord</a> sont totalement inadaptés à la prise de note : dédiés au traitement de longs textes et lourds en fonctions telle collaboration ou révisions, pour la prise de notes rapide c'est enfoncer un clou avec un engin de chantier !</p>
+
+<p>De plus, le format doc est fermé... et payant ! A moins de pirater le produit, il faut débourser… franchement, de nos jours il est devenu inutile de se livrer à ce jeu.</p>
+
+<p>Word n'est même pas utile pour l'écriture de textes courts ou moyens, il y a des outils mille fois meilleurs (<a href="http://www.literatureandlatte.com/scrivener.php">Scrivener</a> par exemple).</p>
+
+<h2>Installation et configuration</h2>
+
+<h3>L'essentiel</h3>
+
+<p>nvALT est une application facile à installer : téléchargez-la <a href="http://brettterpstra.com/projects/nvalt/">en bas de la page</a> puis déplacez-la dans le dossier Application. </p>
+
+<p>Vous pouvez commencer à l'utiliser.</p>
+
+<p>Mais si vous voulez aller encore plus loin dans la productivité, plus tard, après vous être familiarisé avec cet outil, je vous conseille de considérer les liens suivants dès maintenant : ça permet de prendre les devants.</p>
+
+<h3>Recommandé</h3>
+
+<ul>
+<li>Si vous prévoyez d'utiliser un système d'automatisation des tâches tel <a href="http://www.noodlesoft.com/hazel.php">Hazel</a> (ce que je vous recommande vivement), téléchargez <a href="https://code.google.com/p/openmeta/downloads/list">Open Meta</a>, installez la fonction "cachée" OpenMeta pour Hazel, puis installez le binaire et activez la fonction :</li>
+</ul><pre><code>    cd ~/Downloads
+    unzip openmeta_commandline_1.3.0.zip
+    sudo chown u=rw /usr/local/bin
+    mv openmeta /usr/local/bin
+    defaults write com.noodlesoft.Hazel OMToolPath /usr/local/bin/openmeta
+</code></pre>
+
+<ul>
+<li>
+<a href="http://elasticthreads.tumblr.com/post/8212672178/nvit-chrome-and-safari-extensions-for-nvalt">L'extension</a> pour le navigateur Chrome (et Safari) est également pratique, avec entre autres fonctions la sélection d'un texte, d'une URL ou même du contenu d'une page transcrit en Markdown, envoyé directement à nvALT en tant que nouvelle note. Il y a aussi un <a href="http://jots.mypopescu.com/post/8529405944/nvalt-bookmarklet">bookmarklet</a> pour Firefox.</li>
+</ul><h3>Configuration</h3>
+
+<ul>
+<li>Dans les préférences, choisissez la gestion par fichiers texte et indiquez où se trouve votre dossier de notes dans Dropbox </li>
+</ul><p><img src="https://www.evernote.com/shard/s89/sh/1d1dce8a-1db6-4abe-8cf2-ed289dd742d3/1f192c6cc9f7d5e9fa185960e9a7567e/deep/0/Notes.jpg" alt="Fichiers, Dropbox, extensions"></p>
+
+<ul>
+<li><p><a href="http://faceofgeoff.com/post/9665888623/nvalt-quick-tip-making-markdown-readable-and-your">Ajoutez</a> les bons types d'extensions de fichier (nvALT ne met pas d'extension à ses fichiers textes, mais effectuer cette opération lui permet de lire tous les fichiers markdown que l'on copie dans son dossier notes à partir de l'extérieur)</p></li>
+<li><p>Réglez quelques options</p></li>
+</ul><p><img src="https://www.evernote.com/shard/s89/sh/82ccea41-1213-49cc-b27a-560e5597123a/e2f9e19ce8a78478b039bc865e25fe7c/deep/0/Editer.jpg" alt="Options d'édition"></p>
+
+<ul>
+<li>Choisissez une présentation horizontale ou verticale</li>
+<li>Choisissez vos thèmes et couleurs</li>
+</ul><p><img src="https://www.evernote.com/shard/s89/sh/47065da6-a7b9-455d-bbe9-e374ce58dcdc/224e495255f8b9ba9a33f3cb6010a48f/deep/0/Polices/Couleurs.jpg" alt="Polices et couleurs"></p>
+
+<h3>Importer ses notes</h3>
+
+<p>Si vous preniez vos notes dans un autre format ou logiciel et que vous faites le grand saut vers le mode hacker, vous pourrez trouver quelques utilitaires et scripts intéressants pour récupérer vos notes et les exporter en Markdown.</p>
+
+<ul>
+<li>pour <a href="http://simple-backup.appspot.com/">Simplenote</a>
+</li>
+<li>pour <a href="https://fr.support.evernote.com/link/portal/16051/16135/Article/3149/Exporter-des-notes-et-des-carnets-de-notes-dans-Evernote-pour-Mac">Evernote</a>
+</li>
+<li>pour <a href="http://springpad.com/#!/_mak_/explore/sharedapplications/blocks/note/springpaddataextractor">Springpad</a>
+</li>
+</ul><p>On trouve également quelques scripts sh/python/ruby sur <a href="https://github.com/">github</a> pour exporter et transformer quelques formats de notes particuliers.</p>
+
+<h2>Pour commencer</h2>
+
+<h3>Principe de base</h3>
+
+<p><strong>Il n'y a pas de bouton "+" ou "Nouvelle note", pas plus que de bouton "Rechercher".</strong></p>
+
+<p><em>Une fois l'application active[^fn-3] on commence tout de suite à écrire dans la zone de titre.</em></p>
+
+<p>[^fn-3]: click sur son icone dans le dock ou dans la menubar, activé par ALT/TAB, par son raccourci clavier, etc</p>
+
+<p><img src="https://www.evernote.com/shard/s89/sh/b5a220a7-83e1-4ab9-b300-03c8f96f1151/7dada37c05fb4ae8219667b622cda7bc/deep/0/nvALT.jpg" alt="Nouvelle note"></p>
+
+<p>Au fur et à mesure que l'on tape les premières lettres du titre, la liste des notes qui contiennent ces caractères s'actualise en temps réel : si une note existe déjà avec ce titre on peut l'éditer en appuyant sur Entrée ou après avoir navigué avec les flèches du clavier.</p>
+
+<p><img src="https://www.evernote.com/shard/s89/sh/b2e3c819-b1f5-4e4b-bc8e-1d86eb989218/30bafb2433584b98c13e7c194a3280aa/deep/0/nvALT.jpg" alt="Liste des notes"></p>
+
+<p>Si l'on continue de taper et que le titre devient unique, la note le devient aussi et est automatiquement créée.</p>
+
+<p>Le titre écrit, en appuyant sur Entrée le curseur est déplacé dans la zone principale et on peut commencer à écrire le corps du texte.</p>
+
+<h3>Raccourcis clavier</h3>
+
+<p>nvALT est pensée pour les amoureux du clavier et ceux qui veulent toucher la souris le moins possible. </p>
+
+<p>En effet, que ce soit pour des raisons de santé (traumatismes répétés au poignet) ou simplement de productivité, il vaut mieux éviter de trop souvent manipuler la souris : les raccourcis permettent de travailler rapidement sans avoir à bouger les mains hors du clavier.</p>
+
+<p><em>Liste des principaux raccourcis clavier de nvALT :</em></p>
+
+<ul>
+<li><p><strong>Chercher</strong> ou <strong>créer</strong> une note = <code>CMD+L</code> (revient à se placer dans la barre principale)</p></li>
+<li><p><strong>Supprimer</strong> une note = <code>CMD+DEL</code> (mais je déconseille de supprimer, il vaut mieux archiver)</p></li>
+<li><p><strong>Tagger</strong> une note (ajouter des mots-clés) = <code>SHIFT+CMD+T</code> (attention, la liste de tags, séparés par une virgule, est sélectionnée par défaut : ne pas l'effacer par erreur, d'abord faire <code>flèche droite</code> avant d'ajouter des tags)</p></li>
+<li><p><strong>Renommer</strong> une note = <code>CMD+R</code></p></li>
+<li><p><strong>Insérer</strong> un lien = <code>SHIFT+CMD+L</code></p></li>
+<li><p><strong>Afficher</strong> la fenêtre de prévisualisation = <code>CTRL+CMD+P</code></p></li>
+<li><p><strong>Editer</strong> la note dans un logiciel externe = <code>SHIFT+CMD+E</code></p></li>
+</ul><h2>Organiser ses notes</h2>
+
+<p>La manière d'organiser ses notes est un vaste sujet et mériterait d'y consacrer une oeuvre à part entière.</p>
+
+<p>De grands esprits se sont penchés sur la question et on mis au point des techniques efficaces, toutes différentes et dignes d'intérêt : <a href="http://fr.wikipedia.org/wiki/Getting_Things_Done">Getting things done</a>, <a href="http://inboxzero.com/">Inbox zero</a>, etc.</p>
+
+<p>Personnellement, je me "contente" d'utiliser un système de classement à la fois sémantique et complètement libre et anarchique.</p>
+
+<p>En effet, la recherche et les tags dans nvALT sont une fonction si puissante et rapide qu'il suffit de bien tagger et titrer ses notes pour les retrouver en un instant.</p>
+
+<h3>Conventions dans les titres</h3>
+
+<p>Une des meilleures manières de s'organiser est de mettre la date en début ou fin de titre, ce qui autorise une recherche aisée pour plus tard.</p>
+
+<p>Mais taper manuellement la date à chaque fois est très désagréable et source d'erreurs. Je recommande fortement l'utilisation de cette merveille qu'est <a href="http://www.smilesoftware.com/TextExpander/index.html">TextExpander</a> qui vous permettra d'insérer la date et/ou l'heure en tapant deux ou trois lettres seulements.</p>
+
+<p>Je préfère pour mon usage personnel utiliser uniquement un nombre restreint de mots-clés dans mes titres.</p>
+
+<p>Ils correspondent à des catégories plus générales que les tags, ou à des déclencheurs pour Hazel.</p>
+
+<p>Exemples : <code>@post</code>, <code>@email</code>, <code>@logins</code>, <code>@list</code>, <code>@critique</code>, <code>@edito</code>, <code>@tuto</code>, <code>@phone</code>, <code>@links</code>, etc.</p>
+
+<p>Je les fais précéder d'un <code>@</code> pour les retrouver plus facilement.</p>
+
+<p>Si une note doit rester au top de la liste pour que je me souvienne de la traiter, je peux mettre un <code>#</code> au début du titre : <code>#urgent</code>, <code>#anniv</code>, <code>#work</code>, etc.</p>
+
+<p>L'usage de l'anglais est recommandé, les mots sont plus courts et synthétiques. </p>
+
+<p>Bien sûr ça marche aussi en français, il est simplement moins facile de rester cohérent à cause des accents et de l'orthographe plus complexe.</p>
+
+<p><strong>Attention</strong> à ne pas surcharger vos titres avec des mots-clés, les… mots-clés sont là pour ça !</p>
+
+<h3>Meta tags</h3>
+
+<p><strong>Un réflexe à prendre rapidement dans nvALT est de tagger votre note avant d'oublier de le faire</strong>.</p>
+
+<p>J'aime tagger mes notes en deux temps : immédiatement après avoir entré le titre et le début du contenu, puis à la fin avant de passer à autre chose.</p>
+
+<p>Avec le raccourci <code>SHIFT+CMD+T</code> vous ajoutez des tags en les séparant par une virgule.</p>
+
+<p>Vous pouvez tagger de manière plus large que dans les titres, il n'y a pas de limites. </p>
+
+<p>Je recommande néanmoins de respecter une certaine voie du milieu : une grosse dizaine de tags maximum par note semble raisonnable.</p>
+
+<p>Les tags peuvent représenter des catégories, des index, des genres, des mots-clés sémantiques, bref, tout ce que vous souhaitez.</p>
+
+<p>Le genre de tag que j'utilise souvent : </p>
+
+<pre><code>food, films, blog, work, app, list, link, email
+podcast, article, webpage, image, mp3, text
+idea, dev, citation, book, ebay, snippet
+css, php, ruby, jade, tuto, flow
+space, philo, physics, ref, galaxy
+sandwich, cronenberg, tech, racc, song
+perso, reminder, where-keys, when-meeting
+todo, done, archive, null, wtf, cool
+</code></pre>
+
+<h3>Liens inter notes</h3>
+
+<p><strong>Une fonction simple à utiliser qui permet de classer ses notes : les liens inter-notes</strong>.</p>
+
+<p>Il suffit de taper deux fois un crochet carré gauche (<code>[</code>, sous le <code>5</code>), ce qui est immédiatement transformé en double crochet <code>[[]]</code> grâce à l'auto-complétion, et de continuer à taper le titre d'une note : les titres correspondants s'affichent sous le curseur et permettent de choisir la note à laquelle on veut référer.</p>
+
+<p>Exemple : <code>[[@food riz au lait 07/04/2013]]</code> est un lien vers la note ayant le titre "<a href="https://github.com/food" class="user-mention">@food</a> riz au lait 07/04/2013.txt". Je n'ai eu qu'à taper deux fois le crochet puis '<a href="https://github.com/food" class="user-mention">@food</a>' pour voir apparaitre une liste de fichiers à référencer (puisque je place ce tag au début de toutes mes recettes complètes).</p>
+
+<p>Cela permet de créer aisément un système de chapitrage à partir de notes indépendantes.</p>
+
+<p>Vous pouvez par exemple créer une note qui contiendra uniquement des appels à d'autres notes, comme une table des matières : l'index des recettes taggées 'dessert', les chapitres de votre futur roman, les grandes lignes de vos examens d'histoire, rassembler des notes par thème pour un article à publier, etc. </p>
+
+<p>Vous pouvez également vous laisser porter au gré de vos inspirations et écrire des références au fur et à mesure que vous accumulez les notes : il sera toujours facile ensuite de créer une nouvelle note contenant tous les liens grâce à une recherche sur vos tags.</p>
+
+<p>On peut placer un lien inter-notes à n'importe quel endroit du texte.</p>
+
+<h2>Recherche de notes</h2>
+
+<h3>Dans nvALT</h3>
+
+<p><strong>Rien de spécial à faire, si les notes sont bien titrées et taggées, il suffit de commencer à écrire dans la barre de titre et les notes concernées apparaissent en temps réel.</strong></p>
+
+<p>C'est un des gros atouts de nvALT : une réactivité exemplaire et une recherche intuitive.</p>
+
+<h3>En dehors de nvALT</h3>
+
+<p>Une simple recherche dans Spotlight fait apparaitre les notes. De même dans le Finder, bien sûr.</p>
+
+<p>Dans le Terminal, avec <code>mdfind</code> (commande pour Spotlight):</p>
+
+<pre><code>mdfind @food
+mdfind Janvier
+</code></pre>
+
+<p>Brett Terpstra a de bonnes idées de fonctions à placer dans <code>~/.bashrc</code> ou <code>~/.zshrc</code>. Je les ai simplifiées :</p>
+
+<pre><code>fbox () { mdfind -onlyin ~/Dropbox "$1";}
+fposts () { mdfind -onlyin ~/Dropbox/articles "$1";}
+fnotes () { mdfind -onlyin ~/Dropbox/Notes "$1";}
+</code></pre>
+
+<p>mais vous pouvez trouver les originales quelques part au fond de son blog...</p>
+
+<h2>Prévisualisation Markdown</h2>
+
+<p>nvALT inclut une fenêtre flottante pour prévisualiser le rendu de votre document. </p>
+
+<p><img src="https://www.evernote.com/shard/s89/sh/5a820308-00f6-4cea-ba3a-b0f7d43e6882/f117db887cc9a42b9bb88df85ccae21e/deep/0/Capture%20d%E2%80%99e%CC%81cran%202013-04-06%20a%CC%80%2002.33.58.jpg" alt="Prévisualisation nvALT"></p>
+
+<p>On la fait apparaître avec le raccourci clavier <code>CTRL+CMD+P</code>.</p>
+
+<p>Il est possible de personnaliser l'apparence du document dans cette fenêtre avec du CSS.</p>
+
+<p>Intégrez le CSS de votre blog ou ebook à nvALT pour avoir un aperçu de ce que donnera votre document[^fn-4].</p>
+
+<p>[^fn-4]: vous pouvez également télécharger des thèmes prédéfinis : <a href="http://bywordapp.com/extras/index.html">Byword</a>, <a href="https://github.com/moritzz/iAWriterCSS">iAwriter</a>, <a href="http://www.candlerblog.com/2012/02/29/marked-as-css-playground/">play with Marked</a></p>
+
+<p>On peut également visualiser le document dans <a href="http://markedapp.com/">Marked</a> avec <code>SHIFT+CMD+E</code> à condition d'avoir choisi Marked comme application à la place de l'éditeur externe dans les préférences de nvALT.</p>
+
+<h2>Export</h2>
+
+<p>Un des grands avantages de prendre ses notes en Markdown est que la mise en forme est séparée de la structure.</p>
+
+<p>Le document Markdown existant, il est facile ensuite de lui appliquer des styles différents et de l'exporter dans un grand nombre de formats.</p>
+
+<p>Bien sûr le format d'exportation de base est le HTML, mais nvALT excelle à l'export de PDF et permet également de sortir ses notes en DOC (format MS Word), RTF (Rich text format) et TXT (simple texte).</p>
+
+<p>De plus, en choisissant <a href="http://markedapp.com/">Marked</a> comme éditeur externe dans les préférences, vous bénéficiez de la grande richesse en options d'exportation que possède cette app.</p>
+
+<h2>Tri et archivage</h2>
+
+<h3>Automatismes</h3>
+
+<p>Comme vous avez installé Open Meta, vos tags sont partageables par toutes les applications qui reconnaissent ce format ouvert : aujourd'hui, c'est <a href="http://www.noodlesoft.com/hazel.php">Hazel</a> qui nous intéresse.</p>
+
+<p>Nous pouvons par exemple décider qu'une note peut devenir obsolète, mais que l'on ne veut pas l'effacer pour autant : on pourra alors lui ajouter un tag "archive".</p>
+
+<p>Avec Hazel, je peux créer une action qui va archiver cette note dans un dossier de backup dès que j'entre le mot-clé :</p>
+
+<p><img src="https://www.evernote.com/shard/s89/sh/0edf1d29-517b-41a5-a17a-f44a43c33225/5fbd6103db5a16dd50f806cfe1e333c6/deep/0/Capture%20d'%C3%A9cran%2006/04/13%2004:22.jpg" alt="Hazel : déplace vers archive"></p>
+
+<p>Autre cas typique : j'ai souvent dans nvALT une note qui a évolué et qui rassemble dorénavant assez d'éléments pour pouvoir commencer à rédiger un texte à part entière. </p>
+
+<p>Elle passe alors de <em>note</em> à <em>brouillon</em> dans mon esprit : aussitôt je la tagge avec <code>SHIFT+CMD+T</code> avec le mot-clé de mon choix, ici <code>post</code> ou <code>brouillon</code> par exemple.</p>
+
+<p>Grâce à Hazel, je peux faire une action automatique qui, lors du changement de mot-clé, va déplacer le document dans mon dossier Brouillons et immédiatement l'ouvrir dans un autre éditeur, <a href="http://mouapp.com/">Mou</a> par exemple :</p>
+
+<p><img src="https://www.evernote.com/shard/s89/sh/a47c7b15-6953-4ccd-861f-95644bb996b9/8366339e4e308f0c804e381f18e2e9c4/deep/0/Capture%20d%E2%80%99e%CC%81cran%202013-04-06%20a%CC%80%2003.53.39.jpg" alt="Hazel : déplace vers autre éditeur"></p>
+
+<h2>Mode auteur</h2>
+
+<p>On peut configurer nvALT pour le mettre dans un état que j'appelle le mode <em>auteur</em>, c'est-à-dire sans distractions et concentré sur le texte.</p>
+
+<p>Avec <code>SHIFT+CMD+C</code> on cache la liste des notes, puis avec <code>SHIFT+CMD+F</code>on passe en contraste faible, on cache la preview si elle est affichée avec <code>CTRL+CMD+P</code> et enfin avec <code>CTRL+CMD+F</code> on entre en plein écran.</p>
+
+<p>Cependant, même si ça marche bien dans nvALT, je préfère l'utiliser uniquement pour des petits documents, des notes. </p>
+
+<p>Pour écrire des articles longs, des textes complets, je préfère utiliser un éditeur dédié. </p>
+
+<p>Par exemple <a href="http://www.literatureandlatte.com/scrivener.php">Scrivener</a> pour un scénario, des dialogues, un roman ; <a href="http://www.sublimetext.com">Sublime Text 2</a> pour du code ; <a href="http://mouapp.com/">Mou</a> pour un article de blog ou un éditorial, etc.</p>
+
+<p><img src="https://www.evernote.com/shard/s89/sh/0a7daf5c-fd65-4be3-8887-760b0ae1f7f9/d28a1cc19f784ad1c48b71e19ae0af40/deep/0/nvalt-prise-de-notes.jpg" alt="Mou"></p>
+
+<p>Il est également facile d'utiliser <a href="http://markedapp.com/">Marked</a> avec ces apps.</p>
+
+<h2>Astuces</h2>
+
+<h3>Astuces Markdown</h3>
+
+<h4>Rappel/fondamentaux</h4>
+
+<ul>
+<li><p>Deux fois <code>Entrée</code> = nouveau paragraphe</p></li>
+<li><p><code>&gt;</code> ou <code>tab</code> puis votre texte = citation</p></li>
+<li><p><code>#</code>= titre</p></li>
+<li><p><code>##</code> = sous-titre</p></li>
+<li><p><code>###</code> = section</p></li>
+<li><p><code>[texte](lien)</code> = lien vers URL</p></li>
+<li><p><code>*texte*</code> ou <code>_texte_</code> = texte en <em>italique</em></p></li>
+<li><p><code>**texte**</code> ou <code>__texte__</code> = texte en <strong>gras</strong></p></li>
+</ul><h4>Insérer une image</h4>
+
+<p>Pour faire un lien vers une image il suffit d'ajouter un <code>!</code> devant la formule habituelle servant à créer un lien :</p>
+
+<pre><code>![texte](lien)
+</code></pre>
+
+<p>On peut également faire un <strong>drag-n-drop</strong> (glisser-déplacer) du Finder (ou de PathFinder) vers le corps de la note, un lien sera automatiquement créé.</p>
+
+<p>Lien : <a href="http://brettterpstra.com/2012/09/27/quick-tip-images-in-nvalt/">explications</a> (en anglais) pour bénéficier des liens relatifs dans les notes.</p>
+
+<h4>Markdown service tools</h4>
+
+<p>Brett Terpstra a créé les <a href="http://brettterpstra.com/projects/markdown-service-tools/">markdown service tools</a>, un ensemble de services pour OSX accessibles par toutes les applications.</p>
+
+<p>Vous sélectionnez une partie de votre texte, et un service se charge d'y appliquer une action.</p>
+
+<p>Par exemple : avec "Auto search link", vous sélectionnez un ou plusieurs mots, actionnez ce service, et nvALT transforme le mot en lien avec le résultat de la recherche de Google.</p>
+
+<h3>Mode todo list</h3>
+
+<p>Même si je gère mes tâches et toutes mes TODO list dans <a href="http://www.6wunderkinder.com/wunderlist">Wunderlist</a>, j'aime bien de temps en temps me laisser des reminder dans mes notes.</p>
+
+<p>Dans ce cas j'ai un système tout simple : je tagge avec <code>todo</code> toutes les notes qui contiennent une tâche à effectuer mais qui ne sont pas urgentes (la plupart du temps ce sont des références à chercher).</p>
+
+<p>Chaque week-end je mets de l'ordre dans mes documents, et j'en profite pour afficher toutes les notes contenant <code>todo</code> et je change le tag en <code>done</code> ou <code>archive</code> pour celles qui sont accomplies.</p>
+
+<p>Une action Hazel se charge de déplacer les notes concernées dans un dossier d'archive.</p>
+
+<h2>Apps iOS et Android</h2>
+
+<p>La plupart des apps mobiles de prise de notes qui fonctionnent avec Dropbox vous obligent à utiliser leur propre dossier prédéfini pour stocker vos notes. Ce n'est pas acceptable.</p>
+
+<p>Parmi les rares apps qui permettent de choisir un dossier personnel, la seule qui soit vraiment de qualité sur iOS est <a href="http://agiletortoise.com/drafts">Drafts</a>.</p>
+
+<p>Et la seule sur Android, pour les mêmes raisons, est… <a href="https://play.google.com/store/apps/details?id=com.mvilla.draft">Draft</a>.</p>
+
+<h2>Aller plus loin</h2>
+
+<ul>
+<li>On peut approfondir les automatismes avec <a href="http://www.keyboardmaestro.com/main/">Keyboard Maestro</a> ou tout simplement ses propres AppleScripts.</li>
+<li>nvALT n'existe que sur OSX, mais il y a des outils basés sur la même philosophie sur chaque plateforme. De plus, <a href="http://notational.net">Notational Velocity</a>, l'ancêtre de nvALT, est disponible pour Linux et Windows.</li>
+<li>On peut étendre sa gestion des notes à <a href="https://www.omnigroup.com/applications/omnifocus/">Omnifocus</a>, <a href="http://dayoneapp.com/">DayOne</a>, etc.</li>
+<li>Hazel copie mes notes vers <a href="https://drive.google.com/">Google Drive</a> pour un backup supplémentaire.</li>
+<li>Des automatismes avec <a href="http://www.ifttt.com">ifttt</a> ou <a href="https://zapier.com/">zapier</a> permettent d'uploader automatiquement ses notes à partir de Dropbox vers un autre service[^fn-5].</li>
+</ul><p>[^fn-5]: <a href="http://aya.io/blog/if-this-then-that/">if this then that</a> sur Aya</p>
+
+<h2>Liens en vrac</h2>
+
+<ul>
+<li><a href="http://macpowerusers.com/tag/merlin-mann/">How to tag</a></li>
+<li><a href="http://bettermess.com/naming-files-and-avoiding-folders/">Tagging</a></li>
+<li><a href="http://elasticthreads.tumblr.com/">nvALT author</a></li>
+<li><a href="http://nerdquery.com/?media_only=0&amp;query=nvalt&amp;search=1&amp;category=23&amp;catid=23&amp;type=and&amp;results=50&amp;db=0&amp;prefix=0">nvALT NerdQuery</a></li>
+<li><a href="http://shawnblanc.net/2013/03/patrick-welker-sweet-mac-setup/">Patrick Welker's setup</a></li>
+<li><a href="http://www.macdrifter.com/2012/04/michael-schechters-writer-workflow.html">Michael Schechter's workflow</a></li>
+<li><a href="http://www.macdrifter.com/2012/04/a-panegyric-to-marked.html">Using Marked</a></li>
+<li><a href="http://www.macdrifter.com/2012/07/terpstra-day.html">Brett Terpstra's links</a></li>
+<li><a href="http://www.macworld.com/article/1168148/how_i_organize_everything_with_plain_text_notes.html">Organize notes</a></li>
+<li><a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a></li>
+<li><a href="http://brettterpstra.com/2011/08/31/why-markdown-a-two-minute-explanation/">Why Markdown ?</a></li>
+<li><a href="http://www.macworld.com/article/1161549/forget_fancy_formatting_why_plain_text_is_best.html">Why plain text is best</a></li>
+</ul><h2>Crédits</h2>
+
+<p>Merci à <a href="http://brettterpstra.com/">Brett Terpstra</a>, <a href="http://www.macdrifter.com/">Macdrifter</a>, <a href="http://www.rocket-ink.com/">Rocket Ink</a>, <a href="http://bettermess.com/">Bettermess</a> et <a href="https://tutsplus.com/">Tuts+</a>.</p>
+
+<hr><p>© <a href="mailto:eric@aya.io">Eric DEJONCKHEERE</a> 2013</p>
+        </section>
+
+        <footer>
+          Nvalt-guide is maintained by <a href="https://github.com/galaakk">galaakk</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
