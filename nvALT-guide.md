@@ -1,6 +1,6 @@
 > Voici un guide sur nvALT et la prise de notes en Markdown que j'ai publié sur mon site. Je le place ici dans sa version source en Markdown à des fins d'achivage et de référence.
 
----
+===
 
 # nvALT
 
