@@ -4,12 +4,17 @@
 * {
   margin: 0;
   padding: 0;
-
+  @include box-sizing(border-box);
   font-family: Georgia, Palatino, Times, 'Times New Roman', sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  background: #fff;
+  background: #fefefe;
+  width: 960px;
+  max-width: 100%;
+  font-size: 16px;
 }
 
 a {
@@ -27,28 +32,19 @@ a:hover {
 
 #main {
   position: absolute;
-
   top: 40px;
   left: 280px;
-
-  width: 500px;
+  width: 680px;
+  img {
+    max-width: 100%;
+  }
 }
 
 #main h1 {
-  font-size: 40px;
-  font-weight: normal;
-
-  line-height: 40px;
-
-  letter-spacing: -1px;
 }
 
 #main p {
   margin: 20px 0;
-
-  font-size: 15px;
-
-  line-height: 20px;
 }
 
 #main ul, #main ol {
@@ -56,9 +52,6 @@ a:hover {
 }
 
 #main li {
-  font-size: 15px;
-
-  line-height: 20px;
 }
 
 #main ul li {
@@ -67,38 +60,23 @@ a:hover {
 
 #sidebar {
   position: absolute;
-
   top: 40px;
   left: 20px;
   width: 200px;
-
   padding: 20px 20px 0 0;
-
   border-right: 1px solid #ccc;
-
   text-align: right;
 }
 
 #sidebar h2 {
   text-transform: uppercase;
-
-  font-size: 13px;
-
   color: #333;
-
-  letter-spacing: 1px;
-
-  line-height: 20px;
 }
 
 #sidebar ul {
   list-style-type: none;
-
   margin: 20px 0;
 }
 
 #sidebar li {
-  font-size: 14px;
-
-  line-height: 20px;
 }
