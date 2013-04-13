@@ -14,13 +14,8 @@
     <div id="main">
       <%= yield %>
     </div>
-    <div id="sidebar">
-      <h2>Chapitres</h2>
-      <ul>
-        <li><a href="/">Introduction</a></li>
-        <li><a href="/avantages">nvALT:&nbsp;avantages</a></li>
-      </ul>
-    </div>
+
+    <%= render 'sidebar' %>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
