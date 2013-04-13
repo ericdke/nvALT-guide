@@ -1,0 +1,6 @@
+.DS_Store
+.sass-cache
+nanoc.yaml
+output
+tmp
+crash.log
