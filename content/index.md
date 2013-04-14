@@ -2,15 +2,17 @@
 title: Accueil
 ---
 
-# nvALT-guide
+# nvALT
 
-## La prise de notes pour les perfectionnistes
+<h1 class="bigsoustitre">Le guide</h1>
 
-[nvALT](http://brettterpstra.com/projects/nvalt/) pour OSX est une application *gratuite*, légère et rapide qui permet de **prendre des notes instantanément**.
+<h2 class="centre">La prise de notes pour les perfectionnistes</h2>
+
+<p class="centre"><a href="http://brettterpstra.com/projects/nvalt/">nvALT</a> pour OSX est une application gratuite, légère et rapide<br>qui permet de prendre des notes instantanément.</p>
 
 ![nvALT](https://www.evernote.com/shard/s89/sh/31fef5eb-ef56-4139-9802-14040164c539/57d120150a72defff1f8ec889eccb650/deep/0/nvALT.jpg)
 
-nvALT c'est également : 
+C'est également : 
 
 - une gestion des notes par étiquettes et mots-clés
 - le plaisir d'écrire en [Markdown](http://fr.wikipedia.org/wiki/Markdown)

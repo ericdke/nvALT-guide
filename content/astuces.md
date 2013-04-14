@@ -2,11 +2,9 @@
 title: Astuces
 ---
 
-## Astuces
+## Astuces Markdown
 
-### Astuces Markdown
-
-#### Rappel/fondamentaux
+### Rappel/fondamentaux
 
 - Deux fois `Entrée` = nouveau paragraphe
 
@@ -25,7 +23,7 @@ title: Astuces
 - `**texte**` ou `__texte__` = texte en **gras**
 
 
-#### Insérer une image
+### Insérer une image
 
 Pour faire un lien vers une image il suffit d'ajouter un `!` devant la formule habituelle servant à créer un lien&nbsp;:
 
@@ -37,7 +35,7 @@ On peut également faire un **drag-n-drop** (glisser-déplacer) du Finder (ou de
 
 Lien&nbsp;: [explications](http://brettterpstra.com/2012/09/27/quick-tip-images-in-nvalt/) (en anglais) pour bénéficier des liens relatifs dans les notes.
 
-#### Markdown service tools
+## Markdown service tools
 
 Brett Terpstra a créé les [markdown service tools](http://brettterpstra.com/projects/markdown-service-tools/), un ensemble de services pour OSX accessibles par toutes les applications.
 
@@ -45,7 +43,7 @@ Vous sélectionnez une partie de votre texte, et un service se charge d'y appliq
 
 Par exemple : avec "Auto search link", vous sélectionnez un ou plusieurs mots, actionnez ce service, et nvALT transforme le mot en lien avec le résultat de la recherche de Google.
 
-### Mode todo list
+## Mode todo list
 
 Même si je gère mes tâches et toutes mes TODO list dans [Wunderlist](http://www.6wunderkinder.com/wunderlist), j'aime bien de temps en temps me laisser des reminder dans mes notes.
 

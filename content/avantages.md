@@ -18,7 +18,7 @@ fork[^fn-1] du déjà très bon [Notational Velocity](http://notational.net/fr/)
 - on peut ouvrir une note dans un autre éditeur à tout instant
 - inutile de penser à enregistrer, c'est automatique et instantané
 
-### Pourquoi pas une base de données ?
+## Pourquoi pas une base de données ?
 
 La plupart des logiciels de prise de notes enregistrent celles-ci dans un format qui leur est propre, souvent de manière compressée et encodée dans une base de données ([BDD](http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es)).
 
@@ -36,7 +36,7 @@ Personnellement je n'en suis absolument pas certain : avec des outils Unix et de
 
 [^fn-2]: nvALT propose en option de fonctionner avec une base de données au lieu de fichiers texte.  Même si l'application reste agréable à utiliser dans ce cas, ça reste une gestion "à l'ancienne" avec un format que l'on ne peut pas utiliser en dehors de l'application qui le produit.
 
-### Pourquoi écrire en Markdown ?
+## Pourquoi écrire en Markdown ?
 
 C'est comme écrire en langage naturel, avec simplement quelques variations très faciles à retenir.
 
@@ -54,7 +54,7 @@ Surtout : les fichiers texte en Markdown, c'est *universel* et paré pour le fut
 
 ![](https://www.evernote.com/shard/s89/sh/6b594b93-cf66-4b66-b8ae-2f8e44dbf287/527fdc44b4e82a1a094589a5149715ea/deep/0/nvalt-prise-de-notes.jpg)
 
-### Pourquoi pas un traitement de texte ?
+## Pourquoi pas un traitement de texte ?
 
 Utiles au bureau, quoi que de moins en moins, [LibreOffice](https://www.libreoffice.org/) ou [MSWord](https://office.microsoft.com/) sont totalement inadaptés à la prise de note : dédiés au traitement de longs textes et lourds en fonctions telle collaboration ou révisions, pour la prise de notes rapide c'est enfoncer un clou avec un engin de chantier&nbsp;!
 

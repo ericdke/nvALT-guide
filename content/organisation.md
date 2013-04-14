@@ -12,7 +12,7 @@ Personnellement, je me "contente" d'utiliser un système de classement à la foi
 
 En effet, la recherche et les tags dans nvALT sont une fonction si puissante et rapide qu'il suffit de bien tagger et titrer ses notes pour les retrouver en un instant.
 
-### Conventions dans les titres
+## Conventions dans les titres
 
 Une des meilleures manières de s'organiser est de mettre la date en début ou fin de titre, ce qui autorise une recherche aisée pour plus tard.
 

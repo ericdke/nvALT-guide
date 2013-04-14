@@ -1,20 +1,15 @@
 @import "compass";
 @import "normalize";
+@import "typography";
 
 * {
-  margin: 0;
-  padding: 0;
   @include box-sizing(border-box);
-  font-family: Georgia, Palatino, Times, 'Times New Roman', sans-serif;
-  font-weight: normal;
-  font-style: normal;
 }
 
 body {
   background: #fefefe;
   width: 960px;
   max-width: 100%;
-  font-size: 16px;
 }
 
 a {
@@ -32,7 +27,7 @@ a:hover {
 
 #main {
   position: absolute;
-  top: 40px;
+  top: 0;
   left: 280px;
   width: 680px;
   img {
@@ -40,7 +35,33 @@ a:hover {
   }
 }
 
+.centre { text-align: center !important; }
 #main h1 {
+  text-align: center;
+  font-size: 4em;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+#main h1.bigsoustitre {
+  font-size: 2em;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+#main h2.centre {
+  //text-decoration: underline;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ccc;
+}
+#main h2:not(.centre), #main h3 {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+#main p.centre {
+  font-size: 1.2em;
 }
 
 #main p {
@@ -60,17 +81,20 @@ a:hover {
 
 #sidebar {
   position: absolute;
-  top: 40px;
+  top: 31px;
   left: 20px;
-  width: 200px;
+  width: 240px;
   padding: 20px 20px 0 0;
   border-right: 1px solid #ccc;
   text-align: right;
+  font-size: 1em;
 }
 
 #sidebar h2 {
-  text-transform: uppercase;
+  //text-transform: uppercase;
   color: #333;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ccc;
 }
 
 #sidebar ul {
@@ -79,4 +103,24 @@ a:hover {
 }
 
 #sidebar li {
+}
+
+/* #footer {
+  position: fixed;
+  bottom: 0;
+  display: block !important;
+  width: 100% !important;
+  padding: 10px;
+  text-align: center !important;
+  background-color: #fefefe;
+  a {
+    font-size: .8em;
+    color: #ccc;
+  }
+} */
+
+.footnotes {
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  font-size: .8em;
 }

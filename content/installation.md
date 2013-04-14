@@ -27,7 +27,7 @@ Mais si vous voulez aller encore plus loin dans la productivité, plus tard, apr
 
 - [L'extension](http://elasticthreads.tumblr.com/post/8212672178/nvit-chrome-and-safari-extensions-for-nvalt) pour le navigateur Chrome (et Safari) est également pratique, avec entre autres fonctions la sélection d'un texte, d'une URL ou même du contenu d'une page transcrit en Markdown, envoyé directement à nvALT en tant que nouvelle note. Il y a aussi un [bookmarklet](http://jots.mypopescu.com/post/8529405944/nvalt-bookmarklet) pour Firefox.
 
-### Configuration
+## Configuration
 
 - Dans les préférences, choisissez la gestion par fichiers texte et indiquez où se trouve votre dossier de notes dans Dropbox 
 
@@ -44,7 +44,7 @@ Mais si vous voulez aller encore plus loin dans la productivité, plus tard, apr
 
 ![Polices et couleurs](https://www.evernote.com/shard/s89/sh/47065da6-a7b9-455d-bbe9-e374ce58dcdc/224e495255f8b9ba9a33f3cb6010a48f/deep/0/Polices/Couleurs.jpg)
 
-### Importer ses notes
+## Importer ses notes
 
 Si vous preniez vos notes dans un autre format ou logiciel et que vous faites le grand saut vers le mode hacker, vous pourrez trouver quelques utilitaires et scripts intéressants pour récupérer vos notes et les exporter en Markdown.
 

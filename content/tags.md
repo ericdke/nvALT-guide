@@ -2,7 +2,7 @@
 title: Tags
 ---
 
-### Meta tags
+## Meta tags
 
 **Un réflexe à prendre rapidement dans nvALT est de tagger votre note avant d'oublier de le faire**.
 
@@ -27,7 +27,7 @@ Le genre de tag que j'utilise souvent&nbsp;:
     perso, reminder, where-keys, when-meeting
     todo, done, archive, null, wtf, cool
 
-### Liens inter notes
+## Liens inter notes
 
 **Une fonction simple à utiliser qui permet de classer ses notes&nbsp;: les liens inter-notes**.
 

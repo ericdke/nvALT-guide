@@ -2,9 +2,7 @@
 title: Les bases pour commencer
 ---
 
-## Pour commencer
-
-### Principe de base
+## Principe de base
 
 **Il n'y a pas de bouton "+" ou "Nouvelle note", pas plus que de bouton "Rechercher".**
 
@@ -22,7 +20,7 @@ Si l'on continue de taper et que le titre devient unique, la note le devient aus
 
 Le titre écrit, en appuyant sur Entrée le curseur est déplacé dans la zone principale et on peut commencer à écrire le corps du texte.
 
-### Raccourcis clavier
+## Raccourcis clavier
 
 nvALT est pensée pour les amoureux du clavier et ceux qui veulent toucher la souris le moins possible. 
 
