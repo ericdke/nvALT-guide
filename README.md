@@ -6,3 +6,5 @@ Un guide en français sur la prise de notes en Markdown avec [nvALT](http://bret
 Ce repo contient le site du guide, généré avec [nanoc](http://nanoc.ws). *Le fichier de configuration `Rules` est volontairement omis.*
 
 Les contenus sont écrits en [Markdown](http://daringfireball.net/projects/markdown/).
+
+*Contributions, améliorations et correction d'erreurs sont les bienvenues. :)*
